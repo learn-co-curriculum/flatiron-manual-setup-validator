@@ -75,7 +75,6 @@ delimiter
 
 ## 10. Text Editor: VS Code
 print_table_results "Installed VSCode" "command -v code >/dev/null 2>&1 && code -v | grep -q '1.'"
-print_table_results "VSCode set as Learn Editor" "cat ~/.learn-config | grep ':editor:' | grep -q 'code'"
 delimiter
 
 ## 12. Databases
