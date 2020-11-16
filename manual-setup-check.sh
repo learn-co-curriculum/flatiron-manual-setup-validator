@@ -110,7 +110,7 @@ delimiter
 
 ## 12. Databases
 print_table_results "Installed sqlite" "command -v sqlite3 >/dev/null 2>&1"
-print_table_results "Installed PostgreSQL" "command -v postgres | grep -q 'postgres (PostgreSQL)'"
+print_table_results "Installed PostgreSQL" "command -v postgres >/dev/null 2>&1"
 print_table_results "Installed psql" "command -v psql >/dev/null 2>&1 && psql --version | grep -q 'psql (PostgreSQL)'"
 delimiter
 
