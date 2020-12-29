@@ -107,6 +107,7 @@ print_table_results "Installed git" "command -v git >/dev/null 2>&1 && git versi
 delimiter
 
 configuration_header 
+delimiter
 
 ## 10. git
 print_table_results "Github user config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.name='"
