@@ -72,8 +72,8 @@ print_table_results "Xcode Command Line Tools" 'type xcode-select >&- && xpath=$
 delimiter
 
 ## 4. Support Libraries
-print_table_results "Installed gmp" "command -v brew >/dev/null 2>&1 && brew list | grep -q 'gmp'"
-print_table_results "Installed gnupg" "command -v brew >/dev/null 2>&1 && brew list | grep -q 'gnupg'"
+print_table_results "Installed gmp" "command -v brew >/dev/null 2>&1 && brew list --formula | grep -q 'gmp'"
+print_table_results "Installed gnupg" "command -v brew >/dev/null 2>&1 && brew list --formula | grep -q 'gnupg'"
 delimiter
 
 ## 5. Homebrew
