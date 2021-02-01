@@ -81,8 +81,8 @@ print_table_results "Github email config" "command -v git >/dev/null 2>&1 && git
 delimiter
 
 ## 6. Support Libraries
-print_table_results "Installed gmp" "command -v brew >/dev/null 2>&1 && brew list | grep -q 'gmp'"
-print_table_results "Installed gnupg" "command -v brew >/dev/null 2>&1 && brew list | grep -q 'gnupg'"
+print_table_results "Installed gmp" "command -v brew >/dev/null 2>&1 && brew list --formula | grep -q 'gmp'"
+print_table_results "Installed gnupg" "command -v brew >/dev/null 2>&1 && brew list --formula | grep -q 'gnupg'"
 delimiter
 
 ## 7. Ruby Version Manager (rvm)
