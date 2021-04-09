@@ -77,7 +77,7 @@ delimiter
 
 ## 4. Ruby Version Manager (rvm)
 print_table_results "Installed RVM" "command -v rvm | grep -q 'rvm'"
-print_table_results "Default RVM (2.6.1)" "command -v rvm >/dev/null 2>&1 && rvm list | grep -Fq '=* ruby-2.6.1 [ x86_64 ]'"
+print_table_results "Default RVM (2.7.2)" "command -v rvm >/dev/null 2>&1 && rvm list | grep -Fq '=* ruby-2.7.2 [ x86_64 ]'"
 print_table_results "Test RVM PATH" "command -v rvm >/dev/null 2>&1 && rvm list | grep -Fqv 'Warning! PATH'"
 delimiter
 
