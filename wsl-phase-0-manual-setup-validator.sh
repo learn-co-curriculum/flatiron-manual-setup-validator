@@ -59,12 +59,7 @@ delimiter
 print_table_results "Installed VSCode" "command -v code >/dev/null 2>&1 && code -v | grep -q '1.'"
 delimiter
 
-## 2. Google Chrome
-# https://unix.stackexchange.com/questions/63387/single-command-to-check-if-file-exists-and-print-custom-message-to-stdout
-print_table_results "Installed Google Chrome" "[ -f /mnt/c/'Program Files'/Google/Chrome/Application/chrome.exe ]"
-delimiter
-
-## 3. Node Version Manager (nvm)
+## 2. Node Version Manager (nvm)
 # https://unix.stackexchange.com/questions/184508/nvm-command-not-available-in-bash-script
 # https://stackoverflow.com/questions/39190575/bash-script-for-changing-nvm-node-version
 . ~/.nvm/nvm.sh
@@ -75,17 +70,17 @@ print_table_results "Default Node (>11.x)" 'command -v nvm >/dev/null 2>&1 && nv
 # print_table_results "Default Node (6.11.2)" 'command -v nvm >/dev/null 2>&1 && nvm version default | grep -q "v6.11.2"'
 delimiter
 
-## 4. Ruby Version Manager (rvm)
+## 3. Ruby Version Manager (rvm)
 print_table_results "Installed RVM" "command -v rvm | grep -q 'rvm'"
 print_table_results "Default RVM (2.7.3)" "command -v rvm >/dev/null 2>&1 && rvm list | grep -Fq '=* ruby-2.7.3 [ x86_64 ]'"
 print_table_results "Test RVM PATH" "command -v rvm >/dev/null 2>&1 && rvm list | grep -Fqv 'Warning! PATH'"
 delimiter
 
-## 5. Gems
+## 4. Gems
 print_table_results "Gem: bundler" "command -v gem >/dev/null 2>&1 && gem list | grep -q 'bundler'"
 delimiter
 
-## 6. git
+## 5. git
 # https://stackoverflow.com/questions/12254076/how-do-i-show-my-global-git-config
 print_table_results "Installed git" "command -v git >/dev/null 2>&1 && git version | grep -q 'git version'"
 delimiter
@@ -94,7 +89,7 @@ delimiter
 configuration_header
 delimiter
 
-## 7. git
+## 6. git
 print_table_results "Github user config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.name='"
 print_table_results "Github email config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.email='"
 echo "Github User Configuration:"
