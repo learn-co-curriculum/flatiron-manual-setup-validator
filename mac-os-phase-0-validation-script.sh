@@ -113,7 +113,7 @@ delimiter
 print_table_results "Github user config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.name='"
 print_table_results "Github email config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.email='"
 echo "GitHub User Configuration:"
-print_data_row "Username" "command -v git >/dev/null 2>&1 && git config user.name"
+print_data_row "Name" "command -v git >/dev/null 2>&1 && git config user.name"
 print_data_row "Email" "command -v git >/dev/null 2>&1 && git config user.email"
 delimiter
 
