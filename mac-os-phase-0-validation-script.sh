@@ -93,7 +93,7 @@ delimiter
 
 ## 7. Ruby Version Manager (rvm)
 print_table_results "Installed RVM" "command -v rvm >/dev/null 2>&1 && which rvm | grep -q '/Users/.*/\.rvm/bin/rvm'"
-print_table_results "Default RVM (2.7.2)" "command -v rvm >/dev/null 2>&1 && rvm list | grep -Fq '=* ruby-2.7.2 [ x86_64 ]'"
+print_table_results "Default RVM (2.7.3)" "command -v rvm >/dev/null 2>&1 && rvm list | grep -Fq '=* ruby-2.7.3 [ x86_64 ]'"
 print_table_results "Test RVM PATH" "command -v rvm >/dev/null 2>&1 && rvm list | grep -Fqv 'Warning! PATH'"
 delimiter
 
@@ -113,7 +113,7 @@ delimiter
 print_table_results "Github user config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.name='"
 print_table_results "Github email config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.email='"
 echo "GitHub User Configuration:"
-print_data_row "Username" "command -v git >/dev/null 2>&1 && git config user.name"
+print_data_row "Name" "command -v git >/dev/null 2>&1 && git config user.name"
 print_data_row "Email" "command -v git >/dev/null 2>&1 && git config user.email"
 delimiter
 
