@@ -81,8 +81,7 @@ print_table_results "Gem: bundler" "command -v gem >/dev/null 2>&1 && gem list |
 delimiter
 
 ## 5. Python
-# print_table_results "Installed Python" "command -v python | grep -q 'python'"
-print_table_results "Installed Python" "command -v python >/dev/null 2>&1 && which python | grep -q '/Users/.*/\.pyenv/shims/python'"
+print_table_results "Installed Python" "command -v python | grep -q 'python'"
 print_table_results "Default Python (3.8.13)" "command -v python >/dev/null 2>&1 && python -VV | grep -Fq 'Python 3.8.13 (default'"
 delimiter
 
