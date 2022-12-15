@@ -70,12 +70,7 @@ print_table_results "Default Node (>11.x)" 'command -v nvm >/dev/null 2>&1 && nv
 # print_table_results "Default Node (6.11.2)" 'command -v nvm >/dev/null 2>&1 && nvm version default | grep -q "v6.11.2"'
 delimiter
 
-## 3. Python
-print_table_results "Installed Python" "command -v python | grep -q 'python'"
-print_table_results "Default Python (3.8.13)" "command -v python >/dev/null 2>&1 && python -VV | grep -Fq 'Python 3.8.13 (default'"
-delimiter
-
-## 4. git
+## 3. git
 # https://stackoverflow.com/questions/12254076/how-do-i-show-my-global-git-config
 print_table_results "Installed git" "command -v git >/dev/null 2>&1 && git version | grep -q 'git version'"
 delimiter
@@ -84,7 +79,7 @@ delimiter
 configuration_header
 delimiter
 
-## 5. github
+## 4. github
 print_table_results "Github user config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.name='"
 print_table_results "Github email config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.email='"
 echo "Github User Configuration:"
