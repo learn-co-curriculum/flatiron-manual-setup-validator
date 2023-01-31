@@ -71,18 +71,13 @@ delimiter
 print_table_results "Xcode Command Line Tools" 'type xcode-select >&- && xpath=$( xcode-select --print-path ) && test -d "${xpath}" && test -x "${xpath}"'
 delimiter
 
-## 4. Support Libraries
-print_table_results "Installed gmp" "command -v brew >/dev/null 2>&1 && brew list --formula | grep -q 'gmp'"
-print_table_results "Installed gnupg" "command -v brew >/dev/null 2>&1 && brew list --formula | grep -q 'gnupg'"
-delimiter
-
-## 5. Homebrew
+## 4. Homebrew
 # https://stackoverflow.com/questions/21577968/how-to-tell-if-homebrew-is-installed-on-mac-os-x
 # https://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script
 print_table_results "Homebrew" "command -v brew >/dev/null 2>&1"
 delimiter
 
-## 6. Node Version Manager (nvm)
+## 5. Node Version Manager (nvm)
 # https://unix.stackexchange.com/questions/184508/nvm-command-not-available-in-bash-script
 # https://stackoverflow.com/questions/39190575/bash-script-for-changing-nvm-node-version
 . ~/.nvm/nvm.sh
@@ -91,16 +86,12 @@ print_table_results "Installed Node" "command -v node | grep -q '/Users/.*/.nvm/
 print_table_results "Default Node (>11.x)" 'command -v nvm >/dev/null 2>&1 && nvm version default | grep -q "v11\|v12\|v13\|v14\|v15\|v16\|v17\|v18\|v19\|v20"'
 delimiter
 
-## 7. Gems
-print_table_results "Gem: bundler" "command -v gem >/dev/null 2>&1 && gem list | grep -q 'bundler'"
-delimiter
-
-## 8. Python
+## 6. Python
 print_table_results "Installed Python" "command -v python >/dev/null 2>&1 && which python | grep -q '/Users/.*/\.pyenv/shims/python'"
 print_table_results "Default Python (3.8.13)" "command -v python >/dev/null 2>&1 && python -VV | grep -Fq 'Python 3.8.13 (default'"
 delimiter
 
-## 9. git
+## 7. git
 # https://stackoverflow.com/questions/12254076/how-do-i-show-my-global-git-config
 print_table_results "Installed git" "command -v git >/dev/null 2>&1 && git version | grep -q 'git version'"
 delimiter
@@ -108,7 +99,7 @@ delimiter
 configuration_header 
 delimiter
 
-## 10. github
+## 8. github
 print_table_results "Github user config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.name='"
 print_table_results "Github email config" "command -v git >/dev/null 2>&1 && git config --list | grep -q 'user.email='"
 echo "GitHub User Configuration:"
