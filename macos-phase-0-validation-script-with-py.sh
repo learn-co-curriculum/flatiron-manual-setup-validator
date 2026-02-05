@@ -83,7 +83,12 @@ delimiter
 . ~/.nvm/nvm.sh
 print_table_results "Installed NVM" "command -v nvm >/dev/null 2>&1 && nvm --version | grep -q '[0-9]*\.[0-9]*\.[0-9]*'"
 print_table_results "Installed Node" "command -v node | grep -q '/Users/.*/.nvm/versions/node/v.*/bin/node'"
-print_table_results "Default Node (>11.x)" 'command -v nvm >/dev/null 2>&1 && nvm version default | grep -q "v11\|v12\|v13\|v14\|v15\|v16\|v17\|v18\|v19\|v20"'
+print_table_results "Default Node (>=18)" '
+  command -v nvm >/dev/null 2>&1 &&
+  v="$(nvm version default 2>/dev/null)" &&
+  [[ "$v" =~ ^v([0-9]+)\. ]] &&
+  (( ${BASH_REMATCH[1]} >= 18 ))
+'
 delimiter
 
 ## 6. Python
