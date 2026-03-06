@@ -67,9 +67,7 @@ print_table_results "Installed NVM" "command -v nvm >/dev/null 2>&1 && nvm --ver
 print_table_results "Installed Node" "command -v node | grep -q '.nvm/versions/node'"
 print_table_results "Default Node (>=18)" '
   command -v nvm >/dev/null 2>&1 &&
-  v="$(nvm version default 2>/dev/null)" &&
-  [[ "$v" =~ ^v([0-9]+)\. ]] &&
-  (( ${BASH_REMATCH[1]} >= 18 ))
+  nvm version default 2>/dev/null | grep -Eq "^v(1[89]|[2-9][0-9])(\.|$)"
 '
 delimiter
 
